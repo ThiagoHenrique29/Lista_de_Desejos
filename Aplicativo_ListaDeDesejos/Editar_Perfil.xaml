@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Aplicativo_ListaDeDesejos.Editar_Perfil"
+             BackgroundColor="White">
+
+    <Grid>
+        <!-- Layout principal dividido em duas seções -->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <!-- Cabeçalho com o ícone e o título -->
+        <Grid Padding="20, 50, 20, 10" Grid.Row="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <!-- Ícone do presente -->
+            <Image Source="icon_present.png"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"
+                   WidthRequest="50"
+                   HeightRequest="50"
+                   Grid.Row="0" />
+
+            <!-- Título "Lista da Presentes" -->
+            <Label Text="Lista da Presentes"
+                   FontAttributes="Bold"
+                   FontSize="24"
+                   TextColor="#3EC1C7"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"
+                   Grid.Row="1" />
+        </Grid>
+
+        <!-- Formulário -->
+        <Grid Padding="20, 10, 20, 20" Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <!-- Campo Nome -->
+            <Label Text="NOME"
+                   FontAttributes="Bold"
+                   FontSize="14"
+                   Grid.Row="0"
+                   HorizontalOptions="Start" />
+            <Entry Placeholder="Seu nome"
+                   Text="Jiara Martins"
+                   FontSize="18"
+                   Grid.Row="1"
+                   HorizontalOptions="FillAndExpand" />
+
+            <!-- Campo Email -->
+            <Label Text="EMAIL"
+                   FontAttributes="Bold"
+                   FontSize="14"
+                   Grid.Row="2"
+                   HorizontalOptions="Start" />
+            <Entry Placeholder="Seu email"
+                   Text="Jiara Martins"
+                   FontSize="18"
+                   Grid.Row="3"
+                   HorizontalOptions="FillAndExpand" />
+
+            <!-- Campo Senha -->
+            <Label Text="SENHA"
+                   FontAttributes="Bold"
+                   FontSize="14"
+                   Grid.Row="4"
+                   HorizontalOptions="Start" />
+            <Entry Placeholder="Sua senha"
+                   Text="Jiara Martins"
+                   IsPassword="True"
+                   FontSize="18"
+                   Grid.Row="5"
+                   HorizontalOptions="FillAndExpand" />
+
+            <!-- Botão de Salvar -->
+            <Button Text="Salvar"
+                    BackgroundColor="#3EC1C7"
+                    TextColor="White"
+                    FontAttributes="Bold"
+                    FontSize="18"
+                    CornerRadius="10"
+                    Grid.Row="6"
+                    HeightRequest="50"
+                    HorizontalOptions="FillAndExpand" />
+        </Grid>
+    </Grid>
+</ContentPage>

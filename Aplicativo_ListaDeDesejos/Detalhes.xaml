@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Aplicativo_ListaDeDesejos.Detalhes"
+             BackgroundColor="White">
+
+    <Grid Padding="20">
+        <!-- Definições das linhas -->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" /> <!-- Ícone e Título -->
+            <RowDefinition Height="*" />    <!-- Detalhes do item -->
+            <RowDefinition Height="Auto" /> <!-- Botão de comentários -->
+        </Grid.RowDefinitions>
+
+        <!-- Cabeçalho com o ícone e título -->
+        <Grid Grid.Row="0" Padding="0, 50, 0, 30" VerticalOptions="Start">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <!-- Ícone do presente -->
+            <Image Source="icon_present.png"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"
+                   WidthRequest="50"
+                   HeightRequest="50"
+                   Grid.Row="0" />
+
+            <!-- Título -->
+            <Label Text="Lista da Presentes"
+                   FontAttributes="Bold"
+                   FontSize="24"
+                   TextColor="#3EC1C7"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"
+                   Grid.Row="1" />
+        </Grid>
+
+        <!-- Detalhes do Item -->
+        <Grid Grid.Row="1" Padding="0, 10, 0, 0" VerticalOptions="Start">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <!-- Item -->
+            <Label Text="ITEM" 
+                   FontAttributes="Bold" 
+                   FontSize="14" 
+                   TextColor="#BDBDBD"
+                   Grid.Row="0" 
+                   HorizontalOptions="Center" />
+            <Label Text="Caneta"
+                   FontAttributes="Bold"
+                   FontSize="18"
+                   TextColor="Black"
+                   Grid.Row="1"
+                   HorizontalOptions="Center" />
+
+            <!-- Link -->
+            <Label Text="LINK"
+                   FontAttributes="Bold"
+                   FontSize="14"
+                   TextColor="#BDBDBD"
+                   Grid.Row="2"
+                   HorizontalOptions="Center" />
+            <Label Text="(Link)"
+                   FontAttributes="Bold"
+                   FontSize="18"
+                   TextColor="#2D4FB3"
+                   Grid.Row="3"
+                   HorizontalOptions="Center" />
+
+            <!-- Imagem -->
+            <Label Text="IMAGEM"
+                   FontAttributes="Bold"
+                   FontSize="14"
+                   TextColor="#BDBDBD"
+                   Grid.Row="4"
+                   HorizontalOptions="Center" />
+            <Image Source="pen.png" 
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"
+                   WidthRequest="150"
+                   HeightRequest="150"
+                   Grid.Row="5" />
+        </Grid>
+
+        <!-- Botão Comentários -->
+        <Label Grid.Row="2"
+               Text="COMENTÁRIOS"
+               FontAttributes="Bold"
+               FontSize="14"
+               TextColor="#2D4FB3"
+               HorizontalOptions="Center"
+               VerticalOptions="End">
+            <Label.GestureRecognizers>
+                <TapGestureRecognizer
+                    Tapped="comentarios"
+                    NumberOfTapsRequired="1" />
+            </Label.GestureRecognizers>
+        </Label>
+    </Grid>
+</ContentPage>

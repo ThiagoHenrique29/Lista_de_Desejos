@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Aplicativo_ListaDeDesejos.Pagina_Principal"
+             BackgroundColor="White"
+             Title="Lista da Presentes">
+
+    <ContentPage.Content>
+        <Grid Padding="20" RowSpacing="30">
+
+            <!-- Ícone e Título -->
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <!-- Icone do presente -->
+            <Image Grid.Row="0"
+                   Source="presente.png"
+                   WidthRequest="80"
+                   HeightRequest="80"
+                   HorizontalOptions="Center" />
+
+            <!-- Título -->
+            <Label Grid.Row="1"
+                   Text="Lista da Presentes"
+                   FontSize="24"
+                   FontAttributes="Bold"
+                   TextColor="#80cbc4"
+                   HorizontalOptions="Center" />
+
+            <!-- Botões e ícones -->
+            <Grid Grid.Row="2" RowSpacing="20">
+
+                <!-- Botão Meu Perfil -->
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <!-- Ícone Meu Perfil -->
+                <Image Grid.Row="0" Grid.Column="0"
+                       Source="perfil.png"
+                       WidthRequest="40"
+                       HeightRequest="40"
+                       VerticalOptions="Center"
+                       HorizontalOptions="Center" />
+
+                <!-- Botão Meu Perfil -->
+                <Button Grid.Row="0" Grid.Column="1"
+                        Text="Meu Perfil"
+                        BackgroundColor="#80cbc4"
+                        TextColor="Black"
+                        CornerRadius="10"
+                        WidthRequest="200"
+                        HeightRequest="50"
+                        Clicked="Meuperfil"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center" />
+
+                <!-- Ícone Lista de Desejos -->
+                <Image Grid.Row="1" Grid.Column="0"
+                       Source="lista.png"
+                       WidthRequest="40"
+                       HeightRequest="40"
+                       VerticalOptions="Center"
+                       HorizontalOptions="Center" />
+
+                <!-- Botão Lista de Desejos -->
+                <Button Grid.Row="1" Grid.Column="1"
+                        Text="Lista de Desejos"
+                        BackgroundColor="#80cbc4"
+                        TextColor="Black"
+                        CornerRadius="10"
+                        WidthRequest="200"
+                        HeightRequest="50"
+                        Clicked="Listadedesejos"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center" />
+
+                <!-- Ícone Meus Amigos -->
+                <Image Grid.Row="2" Grid.Column="0"
+                       Source="amigos.png"
+                       WidthRequest="40"
+                       HeightRequest="40"
+                       VerticalOptions="Center"
+                       HorizontalOptions="Center" />
+
+                <!-- Botão Meus Amigos -->
+                <Button Grid.Row="2" Grid.Column="1"
+                        Text="Meus Amigos"
+                        BackgroundColor="#80cbc4"
+                        TextColor="Black"
+                        CornerRadius="10"
+                        WidthRequest="200"
+                        HeightRequest="50"
+                        Clicked="Meusamigos"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center" />
+
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

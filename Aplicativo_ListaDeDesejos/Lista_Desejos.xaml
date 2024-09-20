@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Aplicativo_ListaDeDesejos.Lista_Desejos"
+             BackgroundColor="White">
+    <ScrollView>
+        <Grid Padding="30,0" RowSpacing="20">
+            
+            <!-- Definir as linhas do Grid -->
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" /> <!-- Título e ícone -->
+                <RowDefinition Height="Auto" /> <!-- Lista de presentes -->
+                <RowDefinition Height="Auto" /> <!-- Botão de adicionar -->
+            </Grid.RowDefinitions>
+
+            <!-- Título da Página e Ícone -->
+            <Grid Grid.Row="0" Padding="0,30,0,30">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" /> <!-- Ícone -->
+                    <RowDefinition Height="Auto" /> <!-- Título -->
+                </Grid.RowDefinitions>
+
+                <!-- Ícone do presente -->
+                <Image Grid.Row="0"
+                       Source="presente.png"
+                       HeightRequest="100"
+                       WidthRequest="100"
+                       Aspect="AspectFit"
+                       HorizontalOptions="Center" />
+                
+                <!-- Título da Página -->
+                <Label Grid.Row="1"
+                       Text="Lista da Presentes"
+                       FontSize="24"
+                       HorizontalOptions="Center"
+                       TextColor="#66D1E1"
+                       FontAttributes="Bold" />
+            </Grid>
+
+            <!-- Lista de itens -->
+            <Frame Grid.Row="1"
+                   BackgroundColor="#F3F3F3"
+                   CornerRadius="10"
+                   HeightRequest="80"
+                   Padding="10"
+                   HorizontalOptions="FillAndExpand"
+                   VerticalOptions="Center"
+                   
+                   >
+                <Label Grid.Row="2"
+                       Text="Caneta"
+                       FontAttributes="Bold"
+                       FontSize="14"
+                       HorizontalOptions="Center"
+                       VerticalOptions="End">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer
+                            Tapped="detalhes"
+                            NumberOfTapsRequired="1" />
+                    </Label.GestureRecognizers>
+                </Label>
+            </Frame>
+
+            <!-- Botão Adicionar -->
+            <Button Grid.Row="2"
+                    Text="Adicionar"
+                    BackgroundColor="#66D1E1"
+                    TextColor="White"
+                    FontAttributes="Bold"
+                    CornerRadius="20"
+                    HeightRequest="45"
+                    WidthRequest="200"
+                    HorizontalOptions="Center"
+                    Clicked="add"/>
+            
+        </Grid>
+    </ScrollView>
+</ContentPage>

@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Aplicativo_ListaDeDesejos.MainPage"
+             BackgroundColor="White"
+             Title="Login">
+    <ScrollView>
+        <Grid Padding="30,0" RowSpacing="25">
+            
+            <!-- Definir as linhas do Grid -->
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" /> <!-- Título -->
+                <RowDefinition Height="Auto" /> <!-- Ícone do presente -->
+                <RowDefinition Height="Auto" /> <!-- Email label -->
+                <RowDefinition Height="Auto" /> <!-- Email entry -->
+                <RowDefinition Height="Auto" /> <!-- Senha label -->
+                <RowDefinition Height="Auto" /> <!-- Senha entry -->
+                <RowDefinition Height="Auto" /> <!-- Botão de login -->
+                <RowDefinition Height="Auto" /> <!-- Link para cadastrar -->
+            </Grid.RowDefinitions>
+
+            <!-- Título da Página -->
+            <Label Grid.Row="0"
+                   Text="Lista da Presentes"
+                   FontSize="24"
+                   HorizontalOptions="Center"
+                   TextColor="#66D1E1"
+                   FontAttributes="Bold" />
+
+            <!-- Ícone do presente -->
+            <Image Grid.Row="1"
+                   Source="presente.png" 
+                   HeightRequest="100"
+                   WidthRequest="100"
+                   Aspect="AspectFit"
+                   HorizontalOptions="Center" />
+
+            <!-- Campo de email -->
+            <Label Grid.Row="2"
+                   Text="EMAIL"
+                   FontAttributes="Bold"
+                   FontSize="12"
+                   TextColor="#AAAAAA"
+                   HorizontalOptions="Start" />
+            
+            <Entry Grid.Row="3"
+                   x:Name="Txtemail"
+                   Placeholder="Digite o seu e-mail..."
+                   HeightRequest="45"
+                   FontSize="16"
+                   TextColor="#AAAAAA"
+                   HorizontalOptions="FillAndExpand"
+                   Margin="0,0,0,20" />
+
+            <!-- Campo de senha -->
+            <Label Grid.Row="4"
+                   Text="SENHA"
+                   FontAttributes="Bold"
+                   FontSize="12"
+                   TextColor="#AAAAAA"
+                   HorizontalOptions="Start" />
+            
+            <Entry Grid.Row="5"
+                   x:Name="Txtsenha"
+                   Placeholder="Digite a sua senha..."
+                   IsPassword="True"
+                   HeightRequest="45"
+                   FontSize="16"
+                   TextColor="#AAAAAA"
+                   HorizontalOptions="FillAndExpand"
+                   Margin="0,0,0,20" />
+
+            <!-- Botão de Login -->
+            <Button Grid.Row="6"
+                    x:Name="BtnAcessar"
+                    Text="Entrar"
+                    SemanticProperties.Hint="Acesso ao APP"
+                    BackgroundColor="#66D1E1"
+                    TextColor="White"
+                    FontAttributes="Bold"
+                    CornerRadius="20"
+                    HeightRequest="45"
+                    WidthRequest="200"
+                    HorizontalOptions="Center"
+                    Clicked="Botao" />
+
+            <!-- Link para Cadastrar -->
+            <Label Grid.Row="7"
+                   Text="CADASTRAR-SE"
+                   FontSize="14"
+                   FontAttributes="Bold"
+                   TextColor="#2D4FB3"
+                   HorizontalOptions="Center"
+                   VerticalOptions="End">
+                   <Label.GestureRecognizers>
+                          <TapGestureRecognizer
+                                 Tapped="cadastro"
+                                 NumberOfTapsRequired="1"/>
+                   </Label.GestureRecognizers>
+            </Label>
+
+        </Grid>
+    </ScrollView>
+</ContentPage>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Aplicativo_ListaDeDesejos.Cadastro"
+             BackgroundColor="White"
+             Title="Cadastro">
+
+    <Grid Padding="20">
+        <!-- Layout principal dividido em três seções -->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" /> <!-- Cabeçalho com ícone -->
+            <RowDefinition Height="*" />    <!-- Formulário -->
+        </Grid.RowDefinitions>
+
+        <!-- Cabeçalho com o ícone e título -->
+        <Grid Grid.Row="0" Padding="0, 50, 0, 30" VerticalOptions="Start">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <!-- Ícone do presente -->
+            <Image Source="icon_present.png"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"
+                   WidthRequest="50"
+                   HeightRequest="50"
+                   Grid.Row="0" />
+
+            <!-- Título -->
+            <Label Text="Cadastro"
+                   FontAttributes="Bold"
+                   FontSize="24"
+                   TextColor="#3EC1C7"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"
+                   Grid.Row="1" />
+        </Grid>
+
+        <!-- Formulário -->
+        <Grid Grid.Row="1" Padding="0, 10, 0, 0" VerticalOptions="Start">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <!-- Campo Nome -->
+            <Label Text="NOME" 
+                   FontAttributes="Bold" 
+                   FontSize="14" 
+                   Grid.Row="0" 
+                   HorizontalOptions="Start" />
+            <Entry Placeholder="Seu nome"
+                   Text="Jiara Martins"
+                   FontSize="18"
+                   Grid.Row="1"
+                   HorizontalOptions="FillAndExpand" />
+
+            <!-- Campo Email -->
+            <Label Text="EMAIL" 
+                   FontAttributes="Bold" 
+                   FontSize="14" 
+                   Grid.Row="2" 
+                   HorizontalOptions="Start" />
+            <Entry Placeholder="Seu email"
+                   Text="Jiara Martins"
+                   FontSize="18"
+                   Grid.Row="3"
+                   HorizontalOptions="FillAndExpand" />
+
+            <!-- Campo Senha -->
+            <Label Text="SENHA" 
+                   FontAttributes="Bold" 
+                   FontSize="14" 
+                   Grid.Row="4" 
+                   HorizontalOptions="Start" />
+            <Entry Placeholder="Sua senha"
+                   IsPassword="True"
+                   Text="Jiara Martins"
+                   FontSize="18"
+                   Grid.Row="5"
+                   HorizontalOptions="FillAndExpand" />
+
+            <!-- Botão de Cadastro -->
+            <Button Text="Cadastrar"
+                    BackgroundColor="#3EC1C7"
+                    TextColor="White"
+                    FontAttributes="Bold"
+                    FontSize="18"
+                    CornerRadius="10"
+                    Grid.Row="6"
+                    HeightRequest="50"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="End" />
+        </Grid>
+    </Grid>
+</ContentPage>

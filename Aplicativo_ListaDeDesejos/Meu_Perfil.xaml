@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Aplicativo_ListaDeDesejos.Meu_Perfil"
+             BackgroundColor="White"
+             Title="Lista da Presentes">
+
+    <ScrollView>
+        <Grid Padding="20">
+            <!-- Definir as linhas do Grid -->
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" /> <!-- Ícone do presente -->
+                <RowDefinition Height="Auto" /> <!-- Título -->
+                <RowDefinition Height="Auto" /> <!-- Nome -->
+                <RowDefinition Height="Auto" /> <!-- Valor do Nome -->
+                <RowDefinition Height="Auto" /> <!-- Email -->
+                <RowDefinition Height="Auto" /> <!-- Valor do Email -->
+                <RowDefinition Height="Auto" /> <!-- Botão Editar -->
+            </Grid.RowDefinitions>
+
+            <!-- Ícone do presente -->
+            <Image Grid.Row="0"
+                   Source="presente.png"
+                   WidthRequest="80"
+                   HeightRequest="80"
+                   HorizontalOptions="Center" />
+
+            <!-- Título da página -->
+            <Label Grid.Row="1"
+                   Text="Lista da Presentes"
+                   FontSize="24"
+                   FontAttributes="Bold"
+                   TextColor="#66D1E1"
+                   HorizontalOptions="Center" />
+
+            <!-- Título Nome -->
+            <Label Grid.Row="2"
+                   Text="NOME"
+                   FontAttributes="Bold"
+                   FontSize="14"
+                   TextColor="#AAAAAA"
+                   HorizontalOptions="Center"
+                   Margin="0,20,0,0" />
+
+            <!-- Valor do Nome -->
+            <Label Grid.Row="3"
+                   Text="Jiara Martins"
+                   FontSize="16"
+                   TextColor="Black"
+                   HorizontalOptions="Center"
+                   Margin="0,5,0,0" />
+
+            <!-- Título Email -->
+            <Label Grid.Row="4"
+                   Text="EMAIL"
+                   FontAttributes="Bold"
+                   FontSize="14"
+                   TextColor="#AAAAAA"
+                   HorizontalOptions="Center"
+                   Margin="0,20,0,0" />
+
+            <!-- Valor do Email -->
+            <Label Grid.Row="5"
+                   Text="Jiara Martins"
+                   FontSize="16"
+                   TextColor="Black"
+                   HorizontalOptions="Center"
+                   Margin="0,5,0,0" />
+
+            <!-- Botão Editar -->
+            <Button Grid.Row="6"
+                    Text="Editar"
+                    BackgroundColor="#66D1E1"
+                    TextColor="Black"
+                    FontAttributes="Bold"
+                    CornerRadius="20"
+                    HeightRequest="50"
+                    WidthRequest="200"
+                    HorizontalOptions="Center"
+                    Margin="0,30,0,0" 
+                    Clicked="editar"/>
+        </Grid>
+    </ScrollView>
+</ContentPage>

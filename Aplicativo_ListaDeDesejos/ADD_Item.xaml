@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Aplicativo_ListaDeDesejos.ADD_Item"
+             BackgroundColor="White">
+
+    <Grid>
+        <!-- Layout principal dividido em três seções -->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <!-- Cabeçalho com ícone e título -->
+        <Grid Padding="20, 50, 20, 10" Grid.Row="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <!-- Ícone do presente -->
+            <Image Source="icon_present.png"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"
+                   WidthRequest="50"
+                   HeightRequest="50"
+                   Grid.Row="0" />
+
+            <!-- Título "Lista da Presentes" -->
+            <Label Text="Lista da Presentes"
+                   FontAttributes="Bold"
+                   FontSize="24"
+                   TextColor="#3EC1C7"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"
+                   Grid.Row="1" />
+        </Grid>
+
+        <!-- Formulário -->
+        <Grid Padding="20, 10, 20, 10" Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <!-- Campo Item -->
+            <Label Text="ITEM"
+                   FontAttributes="Bold"
+                   FontSize="14"
+                   Grid.Row="0"
+                   HorizontalOptions="Start" />
+            <Entry Placeholder="Item"
+                   Text="Caneta"
+                   FontSize="18"
+                   BackgroundColor="#F5F5F5"
+                   Grid.Row="1"
+                   HorizontalOptions="FillAndExpand" />
+
+            <!-- Campo Link -->
+            <Label Text="LINK"
+                   FontAttributes="Bold"
+                   FontSize="14"
+                   Grid.Row="2"
+                   HorizontalOptions="Start" />
+            <Entry Placeholder="(link)"
+                   Text="(link)"
+                   FontSize="18"
+                   BackgroundColor="#F5F5F5"
+                   Grid.Row="3"
+                   HorizontalOptions="FillAndExpand" />
+
+            <!-- Campo Imagem -->
+            <Label Text="IMAGEM"
+                   FontAttributes="Bold"
+                   FontSize="14"
+                   Grid.Row="4"
+                   HorizontalOptions="Start" />
+            <Button Text="Adicionar Imagem"
+                    BackgroundColor="#F5F5F5"
+                    TextColor="Gray"
+                    FontAttributes="Bold"
+                    Grid.Row="5"
+                    HeightRequest="50"
+                    HorizontalOptions="FillAndExpand" />
+        </Grid>
+
+        <!-- Opções com Checkboxes (Acima dos botões) -->
+        <Grid Grid.Row="2" Padding="20, 0, 20, 10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <!-- Checkbox Amigos Favoritos -->
+            <StackLayout Orientation="Horizontal" Grid.Column="0" VerticalOptions="Center">
+                <CheckBox />
+                <Label Text="Amigos Favoritos" VerticalOptions="Center" />
+            </StackLayout>
+
+            <!-- Checkbox Permitir Comentários -->
+            <StackLayout Orientation="Horizontal" Grid.Column="1" VerticalOptions="Center">
+                <CheckBox />
+                <Label Text="Permitir Comentários" VerticalOptions="Center" />
+            </StackLayout>
+        </Grid>
+
+        <!-- Botões (abaixo dos checkboxes) -->
+        <Grid Grid.Row="3" Padding="20, 0, 20, 20" ColumnSpacing="10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <!-- Botão Cancelar -->
+            <Button Text="Cancelar"
+                    BackgroundColor="#3EC1C7"
+                    TextColor="White"
+                    FontAttributes="Bold"
+                    FontSize="18"
+                    CornerRadius="10"
+                    Grid.Column="0"
+                    HeightRequest="50"
+                    HorizontalOptions="FillAndExpand" />
+
+            <!-- Botão Cadastrar -->
+            <Button Text="Cadastrar"
+                    BackgroundColor="#3EC1C7"
+                    TextColor="White"
+                    FontAttributes="Bold"
+                    FontSize="18"
+                    CornerRadius="10"
+                    Grid.Column="1"
+                    HeightRequest="50"
+                    HorizontalOptions="FillAndExpand" />
+        </Grid>
+    </Grid>
+</ContentPage>

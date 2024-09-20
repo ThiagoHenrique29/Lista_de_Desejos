@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Aplicativo_ListaDeDesejos.ADD_Amigo"
+             BackgroundColor="White"
+             Title="Lista da Presentes">
+
+    <AbsoluteLayout>
+        <!-- Icone do presente -->
+        <Image Source="gift_icon.png" 
+               AbsoluteLayout.LayoutBounds="0.5, 0.1, 100, 100"
+               AbsoluteLayout.LayoutFlags="PositionProportional" />
+
+        <!-- Título -->
+        <Label Text="Lista da Presentes"
+               FontSize="Medium"
+               FontAttributes="Bold"
+               TextColor="#53D1CC"
+               AbsoluteLayout.LayoutBounds="0.5, 0.2, -1, -1"
+               AbsoluteLayout.LayoutFlags="PositionProportional" />
+
+        <!-- Campo Nome -->
+        <Grid AbsoluteLayout.LayoutBounds="0.5, 0.35, 300, 50"
+              AbsoluteLayout.LayoutFlags="PositionProportional">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Label Text="Nome"
+                   FontSize="Small"
+                   Grid.Row="0" />
+            <Entry Text="Jiara Martins"
+                   Grid.Row="1" 
+                   HeightRequest="40"/>
+        </Grid>
+
+        <!-- Campo Email -->
+        <Grid AbsoluteLayout.LayoutBounds="0.5, 0.5, 300, 50"
+              AbsoluteLayout.LayoutFlags="PositionProportional">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Label Text="Email"
+                   FontSize="Small"
+                   Grid.Row="0" />
+            <Entry Text="jiara.martins@example.com"
+                   Grid.Row="1" 
+                   HeightRequest="40"/>
+        </Grid>
+
+        <!-- Checkbox Favorito -->
+        <Grid AbsoluteLayout.LayoutBounds="0.5, 0.65, 300, 50"
+              AbsoluteLayout.LayoutFlags="PositionProportional">
+            <CheckBox />
+            <Label Text="Favorito"
+                   VerticalOptions="Center"
+                   Margin="5,0,0,0" />
+        </Grid>
+
+        <!-- Botões -->
+        <Grid AbsoluteLayout.LayoutBounds="0.5, 0.85, 300, 100"
+              AbsoluteLayout.LayoutFlags="PositionProportional">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+            </Grid.RowDefinitions>
+
+            <Button Text="Cadastrar"
+                    BackgroundColor="#53D1CC"
+                    TextColor="White"
+                    CornerRadius="10"
+                    Grid.Row="0"/>
+            <Button Text="Cancelar"
+                    BackgroundColor="#B0BEC5"
+                    TextColor="White"
+                    CornerRadius="10"
+                    Grid.Row="1"/>
+        </Grid>
+    </AbsoluteLayout>
+</ContentPage>

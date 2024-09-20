@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Aplicativo_ListaDeDesejos.Comentarios"
+             BackgroundColor="White">
+
+    <Grid Padding="20">
+        <!-- Definições das linhas -->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" /> <!-- Ícone e Título -->
+            <RowDefinition Height="Auto" /> <!-- Título "Comentários" -->
+            <RowDefinition Height="*" />    <!-- Comentários -->
+            <RowDefinition Height="Auto" /> <!-- Botão de adicionar -->
+        </Grid.RowDefinitions>
+
+        <!-- Cabeçalho com o ícone e título -->
+        <Grid Grid.Row="0" Padding="0, 50, 0, 30" VerticalOptions="Start">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <!-- Ícone do presente -->
+            <Image Source="icon_present.png"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"
+                   WidthRequest="50"
+                   HeightRequest="50"
+                   Grid.Row="0" />
+
+            <!-- Título -->
+            <Label Text="Lista da Presentes"
+                   FontAttributes="Bold"
+                   FontSize="24"
+                   TextColor="#3EC1C7"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"
+                   Grid.Row="1" />
+        </Grid>
+
+        <!-- Título "Comentários" -->
+        <Label Grid.Row="1"
+               Text="COMENTÁRIOS"
+               FontAttributes="Bold"
+               FontSize="18"
+               TextColor="Gray"
+               HorizontalOptions="Center" />
+
+        <!-- Comentários como botões -->
+        <StackLayout Grid.Row="2" Spacing="20" VerticalOptions="Center">
+            <Button Text="(Comentários)"
+                    BackgroundColor="#E0E0E0"
+                    TextColor="Black"
+                    FontAttributes="Bold"
+                    HeightRequest="50"
+                    CornerRadius="10"
+                    HorizontalOptions="FillAndExpand" />
+
+            <Button Text="(Comentários)"
+                    BackgroundColor="#E0E0E0"
+                    TextColor="Black"
+                    FontAttributes="Bold"
+                    HeightRequest="50"
+                    CornerRadius="10"
+                    HorizontalOptions="FillAndExpand" />
+        </StackLayout>
+
+        <!-- Botão de adicionar comentário -->
+        <Button Grid.Row="3"
+                Text="+"
+                BackgroundColor="#E0E0E0"
+                TextColor="Black"
+                FontSize="30"
+                CornerRadius="10"
+                HeightRequest="50"
+                WidthRequest="50"
+                HorizontalOptions="Center"
+                VerticalOptions="End"
+                Clicked="add_comentario"/>
+    </Grid>
+
+</ContentPage>

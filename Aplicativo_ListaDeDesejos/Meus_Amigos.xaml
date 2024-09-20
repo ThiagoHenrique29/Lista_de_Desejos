@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Aplicativo_ListaDeDesejos.Meus_Amigos"
+             BackgroundColor="White"
+             Title="Lista da Presentes">
+
+    <ScrollView>
+        <Grid Padding="20">
+            <!-- Definir linhas do Grid -->
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" /> <!-- Ícone -->
+                <RowDefinition Height="Auto" /> <!-- Título -->
+                <RowDefinition Height="Auto" /> <!-- Amigos -->
+                <RowDefinition Height="Auto" /> <!-- Botões de Amigos -->
+                <RowDefinition Height="Auto" /> <!-- Amigos Favoritos -->
+                <RowDefinition Height="Auto" /> <!-- Botões de Amigos Favoritos -->
+                <RowDefinition Height="Auto" /> <!-- Botão Adicionar -->
+            </Grid.RowDefinitions>
+
+            <!-- Ícone do presente -->
+            <Image Grid.Row="0"
+                   Source="presente.png"
+                   WidthRequest="80"
+                   HeightRequest="80"
+                   HorizontalOptions="Center" />
+
+            <!-- Título da página -->
+            <Label Grid.Row="1"
+                   Text="Lista da Presentes"
+                   FontSize="24"
+                   FontAttributes="Bold"
+                   TextColor="#80cbc4"
+                   HorizontalOptions="Center" />
+
+            <!-- Título Amigos -->
+            <Label Grid.Row="2"
+                   Text="Amigos"
+                   FontAttributes="Bold"
+                   FontSize="18"
+                   TextColor="Black"
+                   Margin="0,10,0,5"
+                   HorizontalOptions="Start" />
+
+            <!-- Botões de Amigos -->
+            <Grid Grid.Row="3">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <Button Grid.Row="0"
+                        Text="LARA"
+                        BackgroundColor="#F3F3F3"
+                        TextColor="Black"
+                        FontAttributes="Bold"
+                        CornerRadius="10"
+                        HeightRequest="45"
+                        HorizontalOptions="FillAndExpand" />
+
+                <Button Grid.Row="1"
+                        Text="MAURICIO"
+                        BackgroundColor="#F3F3F3"
+                        TextColor="Black"
+                        FontAttributes="Bold"
+                        CornerRadius="10"
+                        HeightRequest="45"
+                        HorizontalOptions="FillAndExpand"
+                        Margin="0,10,0,0" />
+            </Grid>
+
+            <!-- Título Amigos Favoritos -->
+            <Label Grid.Row="4"
+                   Text="Amigos Favoritos"
+                   FontAttributes="Bold"
+                   FontSize="18"
+                   TextColor="Black"
+                   Margin="0,20,0,5"
+                   HorizontalOptions="Start" />
+
+            <!-- Botões de Amigos Favoritos -->
+            <Grid Grid.Row="5">
+                <Button Text="EDUARDO"
+                        BackgroundColor="#F3F3F3"
+                        TextColor="Black"
+                        FontAttributes="Bold"
+                        CornerRadius="10"
+                        HeightRequest="45"
+                        HorizontalOptions="FillAndExpand" />
+            </Grid>
+
+            <!-- Botão Adicionar -->
+            <Button Grid.Row="6"
+                    Text="Adicionar"
+                    BackgroundColor="#66D1E1"
+                    TextColor="White"
+                    FontAttributes="Bold"
+                    CornerRadius="20"
+                    HeightRequest="50"
+                    WidthRequest="200"
+                    HorizontalOptions="Center"
+                    Margin="0,20,0,0"
+                    Clicked="add"/>
+        </Grid>
+    </ScrollView>
+</ContentPage>
