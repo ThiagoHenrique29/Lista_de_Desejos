@@ -57,6 +57,7 @@
                    HorizontalOptions="Start" />
             <Entry Placeholder="Seu nome"
                    Text="Jiara Martins"
+                   TextColor="Black"
                    FontSize="18"
                    Grid.Row="1"
                    HorizontalOptions="FillAndExpand" />
@@ -69,6 +70,7 @@
                    HorizontalOptions="Start" />
             <Entry Placeholder="Seu email"
                    Text="Jiara Martins"
+                   TextColor="Black"
                    FontSize="18"
                    Grid.Row="3"
                    HorizontalOptions="FillAndExpand" />
@@ -81,6 +83,7 @@
                    HorizontalOptions="Start" />
             <Entry Placeholder="Sua senha"
                    Text="Jiara Martins"
+                   TextColor="Black"
                    IsPassword="True"
                    FontSize="18"
                    Grid.Row="5"

@@ -32,6 +32,7 @@
                    FontSize="Small"
                    Grid.Row="0" />
             <Entry Text="Jiara Martins"
+                   TextColor="Black"
                    Grid.Row="1" 
                    HeightRequest="40"/>
         </Grid>
@@ -48,6 +49,7 @@
                    FontSize="Small"
                    Grid.Row="0" />
             <Entry Text="jiara.martins@example.com"
+                   TextColor="Black"
                    Grid.Row="1" 
                    HeightRequest="40"/>
         </Grid>

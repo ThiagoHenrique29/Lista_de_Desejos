@@ -59,8 +59,8 @@
                    HorizontalOptions="Start" />
             <Entry Placeholder="Item"
                    Text="Caneta"
+                   TextColor="Black"
                    FontSize="18"
-                   BackgroundColor="#F5F5F5"
                    Grid.Row="1"
                    HorizontalOptions="FillAndExpand" />
 
@@ -72,8 +72,8 @@
                    HorizontalOptions="Start" />
             <Entry Placeholder="(link)"
                    Text="(link)"
+                   TextColor="Black"
                    FontSize="18"
-                   BackgroundColor="#F5F5F5"
                    Grid.Row="3"
                    HorizontalOptions="FillAndExpand" />
 
